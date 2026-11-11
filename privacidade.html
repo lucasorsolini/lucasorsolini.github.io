@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de Privacidade — gestor-trafego</title>
+<meta name="description" content="Política de Privacidade do gestor-trafego: dados do Google acessados, uso, armazenamento, compartilhamento, retenção e revogação.">
+<style>
+  :root { --texto: #1d1d1f; --suave: #555; --fundo: #fff; --linha: #e5e5e5; --link: #0b57d0; }
+  @media (prefers-color-scheme: dark) { :root { --texto: #f2f2f2; --suave: #b5b5b5; --fundo: #141414; --linha: #2a2a2a; --link: #8ab4f8; } }
+  body { margin: 0; background: var(--fundo); color: var(--texto); font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 48px 20px 64px; }
+  h1 { font-size: 2rem; margin: 0 0 4px; }
+  .sub { color: var(--suave); margin: 0 0 28px; }
+  h2 { font-size: 1.2rem; margin: 32px 0 8px; }
+  a { color: var(--link); }
+  ul { padding-left: 22px; }
+  footer { border-top: 1px solid var(--linha); margin-top: 48px; padding-top: 20px; color: var(--suave); font-size: 15px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Política de Privacidade</h1>
+  <p class="sub">gestor-trafego · Última atualização: 11 de novembro de 2026</p>
+
+  <p>Esta política explica como o <strong>gestor-trafego</strong>, um plugin para o Claude Code que roda no computador do próprio usuário, acessa, usa, guarda e protege os dados das contas do Google que o usuário conecta. Veja também a <a href="./">página inicial do gestor-trafego</a>.</p>
+
+  <h2>1. Quem somos</h2>
+  <p>O gestor-trafego é uma ferramenta de linha de comando mantida por Lucas Orsolini. Não há site com login, servidor nosso ou banco de dados: o plugin executa na máquina do usuário e fala diretamente com as APIs do Google. Contato: <a href="mailto:lucas.orsolini@gmail.com">lucas.orsolini@gmail.com</a>.</p>
+
+  <h2>2. Dados do Google que acessamos</h2>
+  <p>Só com a autorização explícita do usuário, pela tela de consentimento do Google, o gestor-trafego pode acessar:</p>
+  <ul>
+    <li><strong>YouTube Data API</strong> (escopos <code>youtube</code> e <code>youtube.force-ssl</code>): informações do canal do usuário, lista de vídeos, playlists, legendas e comentários; e, a pedido do usuário, envio e edição de vídeos, miniaturas, legendas, playlists e respostas a comentários.</li>
+    <li><strong>YouTube Analytics API</strong> (escopos <code>yt-analytics.readonly</code> e <code>yt-analytics-monetary.readonly</code>): relatórios de desempenho do canal (visualizações, tempo assistido, retenção, origem do tráfego, buscas, dados demográficos agregados e, quando houver, receita estimada).</li>
+  </ul>
+  <p>Não acessamos e-mails, contatos, arquivos do Drive nem qualquer outro dado da conta Google além dos escopos acima.</p>
+
+  <h2>3. Como usamos os dados</h2>
+  <ul>
+    <li>Para mostrar ao próprio usuário, no Claude Code, os números e a situação do canal dele.</li>
+    <li>Para executar as ações que o usuário pede no próprio canal (enviar, editar, organizar, responder). Toda ação que altera algo é mostrada antes e só acontece depois da confirmação do usuário.</li>
+    <li>Para gerar recomendações de conteúdo (temas, títulos, horários) a partir desses números.</li>
+  </ul>
+  <p>Não usamos os dados para publicidade, não vendemos dados, não criamos perfis de terceiros e não usamos dados do Google para treinar modelos de inteligência artificial.</p>
+
+  <h2>4. Onde os dados ficam</h2>
+  <ul>
+    <li>O token de acesso do Google fica num arquivo de configuração no computador do usuário (o <code>.env</code> do projeto), protegido pelas permissões do sistema. Ele não é enviado a nenhum servidor nosso.</li>
+    <li>Os relatórios que o usuário pede para salvar ficam em arquivos na pasta do próprio projeto, no computador dele.</li>
+    <li>Para responder ao usuário, o Claude Code envia ao modelo de IA da Anthropic o conteúdo necessário daquela conversa, conforme os termos que o próprio usuário aceitou com a Anthropic. O gestor-trafego não envia dados do Google a nenhum outro terceiro.</li>
+  </ul>
+
+  <h2>5. Compartilhamento</h2>
+  <p>Não compartilhamos, vendemos nem transferimos dados de usuários do Google a terceiros. A única exceção é o processamento descrito no item 4, que acontece na conversa do próprio usuário com o Claude Code, por iniciativa dele.</p>
+
+  <h2>6. Retenção e exclusão</h2>
+  <ul>
+    <li>Guardamos o token só enquanto o usuário mantiver o canal conectado.</li>
+    <li>Para apagar tudo, o usuário revoga o acesso em <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a> (ou <a href="https://security.google.com/settings/security/permissions">security.google.com/settings/security/permissions</a>) e apaga a linha do token no arquivo <code>.env</code> do projeto. Os relatórios salvos são arquivos do próprio usuário e podem ser apagados por ele a qualquer momento.</li>
+    <li>Pedidos de exclusão ou dúvidas: <a href="mailto:lucas.orsolini@gmail.com">lucas.orsolini@gmail.com</a>.</li>
+  </ul>
+
+  <h2>7. Segurança</h2>
+  <p>As chamadas às APIs do Google usam HTTPS. Credenciais ficam em arquivos com acesso restrito ao usuário do computador e nunca são impressas nem gravadas em repositórios de código.</p>
+
+  <h2>8. Uso limitado</h2>
+  <p>O uso e a transferência, para qualquer outro aplicativo, de informações recebidas das APIs do Google seguem a <a href="https://developers.google.com/terms/api-services-user-data-policy">Política de Dados do Usuário dos Serviços de API do Google</a>, incluindo os requisitos de Uso Limitado.</p>
+  <p>O gestor-trafego usa os Serviços de API do YouTube e concorda com os <a href="https://www.youtube.com/t/terms">Termos de Serviço do YouTube</a>. Consulte também a <a href="https://policies.google.com/privacy">Política de Privacidade do Google</a>.</p>
+
+  <h2>9. Mudanças nesta política</h2>
+  <p>Se esta política mudar, a data no topo é atualizada. Mudanças relevantes são informadas na página inicial do gestor-trafego.</p>
+
+  <footer>
+    <p>gestor-trafego · <a href="./">Página inicial</a> · Contato: <a href="mailto:lucas.orsolini@gmail.com">lucas.orsolini@gmail.com</a></p>
+  </footer>
+</main>
+</body>
+</html>

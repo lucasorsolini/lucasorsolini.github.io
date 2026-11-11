@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gestor-trafego — assistente de marketing digital para Claude Code</title>
+<meta name="description" content="gestor-trafego é uma ferramenta de linha de comando que ajuda o próprio dono das contas a gerir o canal do YouTube, a mensuração e as campanhas de marketing digital a partir do Claude Code.">
+<style>
+  :root { --texto: #1d1d1f; --suave: #555; --fundo: #fff; --linha: #e5e5e5; --link: #0b57d0; }
+  @media (prefers-color-scheme: dark) { :root { --texto: #f2f2f2; --suave: #b5b5b5; --fundo: #141414; --linha: #2a2a2a; --link: #8ab4f8; } }
+  body { margin: 0; background: var(--fundo); color: var(--texto); font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 48px 20px 64px; }
+  h1 { font-size: 2.2rem; margin: 0 0 4px; }
+  .sub { color: var(--suave); margin: 0 0 32px; }
+  h2 { font-size: 1.25rem; margin: 36px 0 8px; }
+  a { color: var(--link); }
+  ul { padding-left: 22px; }
+  footer { border-top: 1px solid var(--linha); margin-top: 48px; padding-top: 20px; color: var(--suave); font-size: 15px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>gestor-trafego</h1>
+  <p class="sub">Assistente de marketing digital que roda no Claude Code, no computador do próprio usuário.</p>
+
+  <h2>O que é</h2>
+  <p><strong>gestor-trafego</strong> é um plugin de linha de comando para o <a href="https://code.claude.com">Claude Code</a>. Ele ajuda o dono das contas a cuidar do próprio marketing digital: o canal do YouTube, a mensuração do site e as campanhas de anúncios. Ele roda só no computador de quem o instalou. Não há site com login, servidor nosso ou banco de dados: tudo acontece na máquina do usuário, com as contas dele.</p>
+
+  <h2>Para que serve o acesso ao Google</h2>
+  <p>Quando o usuário conecta o canal do YouTube, o gestor-trafego pede, pela tela de consentimento do Google, permissão para:</p>
+  <ul>
+    <li><strong>Ler os números do canal</strong> (YouTube Analytics): visualizações, retenção, origem do tráfego e buscas que trouxeram público, para recomendar temas e horários.</li>
+    <li><strong>Gerir os vídeos do próprio canal</strong> (YouTube Data API): enviar vídeos e miniaturas, editar título, descrição e legendas, organizar playlists e responder comentários, sempre a pedido do usuário e com confirmação antes de qualquer alteração.</li>
+  </ul>
+  <p>Cada ação que altera algo no canal é mostrada ao usuário e só acontece depois que ele confirma.</p>
+
+  <h2>Como funciona</h2>
+  <ul>
+    <li>O usuário instala o plugin no Claude Code e autoriza o acesso pela tela oficial do Google.</li>
+    <li>O token de acesso fica guardado num arquivo no computador do usuário. Ele não é enviado a nenhum servidor nosso.</li>
+    <li>O usuário pode revogar o acesso quando quiser, em <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</li>
+  </ul>
+
+  <h2>Privacidade</h2>
+  <p>Leia a <a href="privacidade.html">Política de Privacidade do gestor-trafego</a>: ela diz quais dados são acessados, como são usados e guardados e como revogar o acesso.</p>
+
+  <footer>
+    <p>gestor-trafego · Contato: <a href="mailto:lucas.orsolini@gmail.com">lucas.orsolini@gmail.com</a> · <a href="privacidade.html">Política de Privacidade</a></p>
+  </footer>
+</main>
+</body>
+</html>
